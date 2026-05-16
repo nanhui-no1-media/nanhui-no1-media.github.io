@@ -1,0 +1,37 @@
+/* 全局与基础设置 */
+html {
+  font-size: 20px; /* 基础字号*/
+  font-family: "Open Sans", sans-serif;
+  background-color: #81bbf1;
+}
+
+/*  */
+header {
+  color: #000000;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+}
+
+/*header h1,
+header img {
+  display: flex;
+}*/
+
+header ul {
+  height: 30px;
+  display: flex;
+}
+
+header li {
+  width: 150px;
+}
+
+/*  */
+/*main :left,
+main :right {
+  width: 300px;
+  display: block;
+}*/
