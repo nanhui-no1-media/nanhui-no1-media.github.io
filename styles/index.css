@@ -14,28 +14,31 @@ header {
   color: #000000;
 }
 
-header img {
-  width: 50px;
-  height: 50px;
+/*.title {
+  display: flex;
 }
 
-/*header h1,
-header img {
-  display: flex;
+.title > * {
+  height: 30px;
 }*/
 
 header ul {
   height: 30px;
-  display: flex;
 }
 
 header li {
   width: 150px;
 }
 
+.bar > ul {
+  display: flex;
+}
+
 /*  */
-/*main :left,
-main :right {
-  width: 300px;
-  display: block;
-}*/
+.left-right {
+  display: flex;
+}
+
+.left-right > div {
+  width: 50%;
+}

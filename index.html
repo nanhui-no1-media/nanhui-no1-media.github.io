@@ -5,7 +5,7 @@
     <meta name="preview" content="width=device-width" />
     <meta name="keywords" content="上海市南汇第一中学传媒社,南汇一中传媒社" />
     <title>上海市南汇第一中学传媒社</title>
-    <link href="styles/style.css" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
     <script src="scripts/main.js" defer></script>
     <!--<link rel="icon" href="favicon.ico" type="image/x-icon" />-->
     <!--此图标文件尚未制作-->
@@ -13,20 +13,27 @@
   <body>
     <!--以下为浮动窗口-->
     <header>
-      <img src="images/社徽.jpg" alt="社徽" width="50" height="50" />
-      <h1>上海市南汇第一中学传媒社</h1>
+      <div class="title">
+        <div>
+          <img src="images/社徽.jpg" alt="社徽" width="50" height="50" />
+          <h1>上海市南汇第一中学传媒社</h1>
+        </div>
+      </div>
 
-      <h2>功能栏</h2>
-      <ul>
-        <li><a href="index.html">主页</a></li>
-        <li><a href="nav/club-introduction/index.html">社团简介</a></li>
-        <li><a href="nav/organiazational-structure/index.html">组织架构</a></li>
-        <li><a href="nav/activity-application/index.html">活动申报</a></li>
-        <li><a href="nav/club-management/index.html">社团管理</a></li>
-        <li><a href="nav/submit-suggestions/index.html">建议提交</a></li>
-        <li><a href="nav/about-us/index.html">关于网站</a></li>
-      </ul>
-      <a href="">登录或注册</a>
+      <div class="bar">
+        <ul>
+          <li><a href="index.html">主页</a></li>
+          <li><a href="nav/club-introduction/index.html">社团简介</a></li>
+          <li>
+            <a href="nav/organiazational-structure/index.html">组织架构</a>
+          </li>
+          <li><a href="nav/activity-application/index.html">活动申报</a></li>
+          <li><a href="nav/club-management/index.html">社团管理</a></li>
+          <li><a href="nav/submit-suggestions/index.html">建议提交</a></li>
+          <li><a href="nav/about-us/index.html">关于网站</a></li>
+          <li><a href="">登录或注册</a></li>
+        </ul>
+      </div>
     </header>
     <!--以上-->
 
@@ -34,20 +41,24 @@
       <img src="images/" alt="一张展示校园风采的照片" />
 
       <!--以下为（？）-->
-      <left><img src="看板娘" alt="一个体现了我社的精神风貌的角色" /></left>
-      <right>
-        <h2>今日活动</h2>
-        <ol>
-          <li>1</li>
-          <li>2</li>
-        </ol>
+      <div class="left-right">
+        <div class="left">
+          <img src="看板娘" alt="一个体现了我社的精神风貌的角色" />
+        </div>
+        <div class="right">
+          <h2>今日活动</h2>
+          <ol>
+            <li>1</li>
+            <li>2</li>
+          </ol>
 
-        <h2>工作活动</h2>
-        <ol>
-          <li>1</li>
-          <li>2</li>
-        </ol>
-      </right>
+          <h2>工作活动</h2>
+          <ol>
+            <li>1</li>
+            <li>2</li>
+          </ol>
+        </div>
+      </div>
     </main>
     <!--以上-->
 
