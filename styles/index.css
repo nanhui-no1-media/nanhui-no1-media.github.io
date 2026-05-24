@@ -14,24 +14,22 @@ header {
   color: #000000;
 }
 
-/*.title {
-  display: flex;
+.title {
+  display: inline-flex;
+  height: auto;
 }
 
-.title > * {
-  height: 30px;
-}*/
-
-header ul {
-  height: 30px;
-}
-
-header li {
-  width: 150px;
+.bar {
+  background-color: aquamarine;
 }
 
 .bar > ul {
   display: flex;
+  list-style: none;
+}
+
+.bar > ul > li {
+  margin: auto;
 }
 
 /*  */
