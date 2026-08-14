@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>考试看板</title>
     <link rel="stylesheet" href="../../styles/exam-board.css">
 </head>
-
 <body>
+    <!-- 右上角齿轮设置按钮 -->
+    <button id="settings-btn" class="settings-btn" title="设置">⚙️</button>
+
+    <!-- 设置弹窗面板 -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3>考试时间配置列表</h3>
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>科目</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body">
+                    <!-- 动态生成表格行 -->
+                </tbody>
+            </table>
+            <button id="add-row-btn" class="btn-add">+ 添加科目</button>
+            <div class="modal-actions">
+                <button id="save-settings-btn" class="btn-save">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面核心展示区域 -->
     <div class="board-container">
         <!-- 第一行：当前时间 -->
         <div class="row1">
             <span id="current-time">00:00:00</span>
         </div>
 
-        <!-- 第二行：当前科目 & 结束时间 -->
+        <!-- 第二行：当前科目 & 开始时间 -->
         <div class="info-grid">
             <div class="left-col">
-                <span>当前科目：</span><span id="current-subject">语文</span>
+                <span>当前科目：</span><span id="current-subject">无</span>
             </div>
-            <div class="right-col">
+            <div class="right-col" id="start-time-container">
                 <span>开始时间：</span><span id="start-time">00:00</span>
             </div>
         </div>
 
-        <!-- 第三行：左侧占位，右侧开始时间 -->
+        <!-- 第三行：左侧占位，右侧结束时间 -->
         <div class="info-grid">
             <div class="empty-col"></div>
-            <div class="right-col">
+            <div class="right-col" id="end-time-container">
                 <span>结束时间：</span><span id="end-time">00:00</span>
             </div>
         </div>
@@ -36,6 +63,4 @@
 
     <script src="../../scripts/exam-board.js"></script>
 </body>
-
 </html>
-
