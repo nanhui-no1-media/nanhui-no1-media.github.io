@@ -1,3 +1,9 @@
+// 5 分钟 = 300,000 毫秒
+const SYNC_INTERVAL = 5 * 60 * 1000; 
+
+// 记录服务器时间与本地时间的差值（毫秒）
+let timeOffset = 0;
+
 /**
  * 使用纯毫秒时间戳授时，完美避开时区解析问题
  */
@@ -44,3 +50,35 @@ async function syncTime() {
         }
     }
 }
+
+/**
+ * 刷新页面显示的时间
+ */
+function updateDisplay() {
+    // 当前校准后的准确时间 = 本地时间 + 差值
+    const correctedNow = new Date(Date.now() + timeOffset);
+    
+    const hours = String(correctedNow.getHours()).padStart(2, '0');
+    const minutes = String(correctedNow.getMinutes()).padStart(2, '0');
+    const seconds = String(correctedNow.getSeconds()).padStart(2, '0');
+
+    const timeElement = document.getElementById('current-time');
+    if (timeElement) {
+        timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+}
+
+// 初始化执行
+function init() {
+    // 1. 立即同步一次时间
+    syncTime();
+    
+    // 2. 每 5 分钟同步一次
+    setInterval(syncTime, SYNC_INTERVAL);
+
+    // 3. 每秒更新界面显示
+    updateDisplay();
+    setInterval(updateDisplay, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', init);
