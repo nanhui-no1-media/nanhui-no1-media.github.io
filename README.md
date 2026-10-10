@@ -1,4 +1,4 @@
-# nanhui-no1-media.github.io
+# nhyzcms.github.io
 
 上海市南汇第一中学传媒社的 GitHub Pages 站点（旧版介绍页）。
 
